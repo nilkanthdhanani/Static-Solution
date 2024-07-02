@@ -1,0 +1,16 @@
+
+.scroll-progress-container {
+    position: fixed;
+    width: 100%;
+    top: 42px;
+    left: 0;
+    z-index: 9;
+    background-color: var(--scroll-color);
+}
+
+.scroll-progress-bar {
+    height: 5px;
+    background-color: var(--scroll-bgcolor);
+    width: 0;
+    transition: width 0.25s ease-in-out;
+}

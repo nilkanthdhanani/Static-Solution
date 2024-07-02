@@ -1,0 +1,11 @@
+@import '../../styles/index.scss';
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: #fff;
+    color: var(--color-black);
+    font-style: 20px;
+}
