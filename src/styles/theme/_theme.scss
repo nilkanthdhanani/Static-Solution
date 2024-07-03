@@ -1,9 +1,20 @@
 :root {
     --color-black: #000;
     --color-white: #fff;
+    --color-black-dull: rgba(0, 0, 0, 0.7);
 
-    --scroll-bgcolor: #3498db;
-    --scroll-color: #f5f5f5;
+    --font-color: #313942;
+    --font-color-ancer: #313942;
+    --font-color-ancerH: #0088ff;
+
+    --scroll-bgcolor: #a7a9ab;
+    --scroll-color: #e8e8e9;
+
+    --bgcolor: #eef2f6;
+    --bgcolor-button: #fa9a40;
+    --bgcolor-buttonH: #f18110;
+
+    --border-color: #eceff3;
 
     --font-family-montserrat: "Montserrat", sans-serif;
     --font-family-open: "Open Sans", sans-serif;

@@ -1,0 +1,23 @@
+@import "../typography/typography";
+@import "../breakpoint/breakpoint.scss";
+
+.header-button {
+    @include breakpoint("lg-max") {
+        display: none;
+    }
+
+    button {
+        padding: 8px 18px;
+        background-color: var(--bgcolor-button);
+        border: none;
+        border-radius: 99px;
+        color: var(--color-white);
+        @include font16;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--bgcolor-buttonH);
+        }
+    }
+}

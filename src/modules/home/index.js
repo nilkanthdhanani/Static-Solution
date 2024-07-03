@@ -8,9 +8,6 @@ export default function Home() {
       <div className="App">
         <ScrollProgress />
         <div className="content">
-          <h1>Scroll Down to See the Progress Bar in Action</h1>
-          <p>Your content goes here...</p>
-          {/* Add more content to enable scrolling */}
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium blanditiis rerum ducimus illo facilis aperiam? Ipsum odit voluptate at nihil aperiam tenetur itaque eveniet atque! Saepe eveniet eum tempore omnis!
             Voluptatem fuga nisi doloremque possimus, fugit quis harum ratione facilis odit itaque sapiente maxime porro amet! Minima, illo voluptas? Odit aliquid impedit veritatis sequi cum quibusdam quidem aperiam aspernatur fugit.
             Dolore mollitia adipisci quia aperiam, molestiae ratione in non rem placeat amet minima illum tempore vel corporis? Ex, harum accusamus quod minus totam animi dignissimos dolorum reprehenderit. Nam, suscipit temporibus!

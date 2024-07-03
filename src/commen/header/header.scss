@@ -1,11 +1,291 @@
-@import '../../styles/index.scss';
+@import "../../styles/index.scss";
 
-header {
+.header {
     position: sticky;
     top: 0;
-    width: 100%;
     z-index: 9;
-    background-color: #fff;
-    color: var(--color-black);
-    font-style: 20px;
+    background-color: var(--color-white);
+    font-family: var(--font-family-open);
+
+    .header-div {
+        @include flex-between;
+        padding: 15px 0;
+
+        .header-div-logo {
+            cursor: pointer;
+
+            img {
+                width: 160px;
+                max-height: 40px;
+
+                @media (max-width: 1024px) {
+                    max-width: 120px;
+                }
+            }
+        }
+
+        .header-div-first {
+            @include flex;
+            gap: 30px;
+
+            @include breakpoint("lg-max") {
+                display: none;
+            }
+
+            .header-div-ancer {
+                position: relative;
+                @include flex-center;
+                gap: 3px;
+                cursor: pointer;
+
+                a {
+                    color: var(--font-color-ancer);
+                    @include font16;
+                    font-weight: 500;
+                }
+
+                svg {
+                    margin-top: 3px;
+                    width: 20px;
+                    max-height: 20px;
+                    fill: var(--font-color-ancer);
+                }
+
+                .header-div-drop,
+                .header-div-drop2 {
+                    position: absolute;
+                    display: block;
+                    top: 100%;
+                    width: max-content;
+                    max-height: 100vh;
+                    border-radius: 10px;
+                    background-color: var(--color-white);
+                    box-shadow:
+                        0 40px 40px rgba(10, 33, 65, 0.1),
+                        0px 0px 2px rgba(0, 0, 0, 0.13);
+
+                    .header-div-drop-text {
+                        padding: 20px;
+                        border-radius: 6px;
+                        transition: 0.3s ease-in-out;
+                        color: var(--font-color-ancer);
+
+                        .drop-head {
+                            @include flex;
+                            gap: 8px;
+                            margin-bottom: 10px;
+
+                            img {
+                                width: 20px;
+                                height: 20px;
+                                filter: grayscale(100%);
+                            }
+
+                            h2 {
+                                @include font18;
+                                font-weight: 700;
+                            }
+                        }
+
+                        p {
+                            @include font14;
+                            max-width: 270px;
+                        }
+
+                        &:hover {
+                            transition: 0.3s ease-in-out;
+                            background-color: var(--bgcolor);
+                            color: var(--font-color-ancerH);
+
+                            .drop-head {
+                                img {
+                                    filter: grayscale(0%);
+                                }
+                            }
+                        }
+                    }
+
+                    .header-div-drop-list {
+                        @include grid2c;
+                        gap: 0;
+
+                        li {
+                            padding: 15px 25px;
+                            list-style: none;
+                            @include flex-between;
+                            min-width: 210px;
+                            border-bottom: 1px solid var(--border-color);
+                            transition: 0.3s ease-in-out;
+
+                            &:nth-child(odd) {
+                                border-right: 1px solid var(--border-color);
+                            }
+
+                            &:last-child {
+                                grid-column: 1 / span 2;
+                            }
+
+                            a {
+                                @include font16;
+                                font-weight: 600;
+                                color: var(--font-color-ancer);
+                            }
+
+                            svg {
+                                margin: 0;
+                                fill: var(--font-color-ancer);
+                            }
+
+                            &:hover {
+                                transition: 0.3s ease-in-out;
+                                background-color: var(--bgcolor);
+                                a {
+                                    color: var(--font-color-ancerH);
+                                }
+                                svg {
+                                    fill: var(--font-color-ancerH);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .header-div-drop {
+                    padding: 10px;
+                }
+
+                &:hover {
+                    a {
+                        color: var(--font-color-ancerH);
+                    }
+                    svg {
+                        fill: var(--font-color-ancerH);
+                    }
+                }
+            }
+        }
+
+        .header-div-last {
+            @include flex;
+            gap: 30px;
+
+            img {
+                width: 20px;
+                cursor: pointer;
+            }
+
+            a {
+                @include font16;
+                font-weight: 600;
+                color: var(--font-color-ancer);
+
+                @include breakpoint("sm-max") {
+                    display: none;
+                }
+
+                &:hover {
+                    color: var(--font-color-ancerH);
+                }
+            }
+
+            .header-div-menu {
+                display: none;
+
+                @include breakpoint("lg-max") {
+                    display: block;
+
+                    img {
+                        width: 25px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .sidebar-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-black-dull);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+
+        &.open {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        background-color: var(--color-white);
+        flex-direction: column;
+        z-index: 11;
+        transition: right 0.3s ease;
+
+        &.open {
+            left: 0;
+        }
+
+        .sidebar-div-logo {
+            padding: 15px 20px;
+
+            a {
+                display: inline-block;
+
+                img {
+                    cursor: pointer;
+                    max-width: 120px;
+                }
+            }
+        }
+
+        .sidebar-div-ancer {
+            margin: 15px;
+
+            a {
+                display: block;
+                @include font16;
+                font-weight: 600;
+                color: var(--font-color-ancer);
+                padding: 20px;
+                border-radius: 6px;
+                cursor: pointer;
+
+                &:nth-child(4) {
+                    display: none;
+                }
+
+                &:nth-child(5) {
+                    display: none;
+                }
+
+                @include breakpoint("sm-max") {
+
+                    &:nth-child(4) {
+                        display: block;
+                    }
+    
+                    &:nth-child(5) {
+                        display: block;
+                    }
+                }
+
+                &:hover {
+                    background-color: var(--bgcolor);
+                    color: var(--font-color-ancerH);
+                }
+            }
+        }
+    }
 }
