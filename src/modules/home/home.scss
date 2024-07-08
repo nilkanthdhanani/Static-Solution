@@ -307,13 +307,29 @@
             padding: 30px;
             background-color: var(--color-white);
             color: var(--font-color);
-
-            &:nth-child(1) {
+            cursor: pointer;
+            transition: .3s ease-in-out;
+            
+            &:hover {
                 background-color: var(--font-color);
+                border-radius: 10px;
                 color: var(--color-white);
+                transform: scale(1.08);
+                transition: .3s ease-in-out;
 
                 p {
                     color: var(--color-white);
+                }
+
+                .purchase-button {
+                    button {
+                        background-color: var(--color-white);
+                        color: var(--font-color);
+
+                        svg {
+                            fill: var(--font-color);
+                        }
+                    }
                 }
             }
         }
@@ -332,10 +348,10 @@
                 color: var(--color-white);
                 background-color: var(--bgcolor6);
                 border-radius: 30px;
-                transition: .3s ease-in-out;
+                transition: 0.3s ease-in-out;
 
                 &:hover {
-                    transition: .3s ease-in-out;
+                    transition: 0.3s ease-in-out;
                     background-color: var(--bgcolor7);
                     color: var(--font-color2);
                 }

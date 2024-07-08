@@ -25,10 +25,17 @@ footer {
                     display: inline-block;
                     padding: 8px;
                     @include font16;
-                    font-weight: 500;
+                    font-weight: 600;
+                    color: var(--font-color2);
+                    background-color: var(--bgcolor2);
+                    border-radius: 20px 20px 20px 0;
+                }
+            }
+
+            &:hover {
+                h3 {
                     color: var(--color-white);
                     background-color: var(--color-black);
-                    border-radius: 20px 20px 20px 0;
                 }
             }
         }

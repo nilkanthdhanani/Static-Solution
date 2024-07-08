@@ -18,7 +18,7 @@ export default function Footer() {
             <div className="footer-first-main">
               <img src={favicon} alt="faviconB" onClick={toggleAskBox} />
               <div className="footer-first-ask">
-                <h3>Click for Any questions?</h3>
+                <h3>Click for questions?</h3>
               </div>
             </div>
           </div>

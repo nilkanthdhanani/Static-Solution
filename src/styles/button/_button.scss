@@ -125,26 +125,6 @@
             width: 18px;
             fill: var(--color-white);
         }
-
-        &:hover {
-            transition: 0.3s ease-in-out;
-            background-color: var(--bgcolor-buttonH2);
-        }
-    }
-}
-
-#purchase-button-first {
-    button {
-        background-color: var(--color-white);
-        color: var(--font-color);
-
-        svg {
-            fill: var(--font-color);
-        }
-
-        &:hover {
-            background-color: var(--bgcolor-buttonH4);
-        }
     }
 }
 
