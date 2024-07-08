@@ -1,7 +1,7 @@
 @import "../../styles/index.scss";
 
 footer {
-    margin: 60px 0;
+    margin-top: 60px;
 
     .footer-first {
         @include flex-center;
@@ -85,8 +85,8 @@ footer {
 
     .footer-last {
         text-align: center;
-        margin-top: 30px;
+        margin: 20px 0;
         @include font14;
-        color: var(--font-color4); 
+        color: var(--font-color4);
     }
 }
