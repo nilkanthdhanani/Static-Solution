@@ -261,6 +261,7 @@
                 padding: 20px;
                 border-radius: 6px;
                 cursor: pointer;
+                transition: .3s ease-in-out;
 
                 &:nth-child(4) {
                     display: none;
@@ -282,8 +283,9 @@
                 }
 
                 &:hover {
-                    background-color: var(--bgcolor);
-                    color: var(--font-color-ancerH);
+                    transition: .3s ease-in-out;
+                    color: var(--bgcolor);
+                    background-color: var(--font-color);
                 }
             }
         }

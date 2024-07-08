@@ -8,6 +8,12 @@
     z-index: 1000;
     box-sizing: border-box;
 
+    @include breakpoint("sm-max") {
+        width: 100%;
+        right: 0;
+        bottom: 0;
+    }
+
     .ask-box-content {
         background-color: var(--color-white);
         box-shadow:

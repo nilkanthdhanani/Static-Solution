@@ -27,6 +27,10 @@
 .hbd1-button {
     @include flex;
     gap: 30px;
+    
+    @include breakpoint("sm-max") {
+        flex-wrap: wrap;
+    }
 
     button {
         padding: 17px 24px;
@@ -76,6 +80,12 @@
         cursor: pointer;
         transition: 0.3s ease-in-out;
 
+        @include breakpoint("sm-max") {
+            @include font16;
+            font-weight: 700;
+            padding: 15px 17px;
+        }
+
         &:hover {
             transition: 0.3s ease-in-out;
             background-color: var(--bgcolor-buttonH2);
@@ -121,6 +131,12 @@
         gap: 7px;
         transition: 0.3s ease-in-out;
 
+        @include breakpoint("lg-max") {
+            padding: 12px;
+            @include font14;
+            font-weight: 700;
+        }
+
         svg {
             width: 18px;
             fill: var(--color-white);
@@ -142,6 +158,12 @@
         font-weight: 700;
         cursor: pointer;
         transition: 0.3s ease-in-out;
+
+        @include breakpoint("sm-max") {
+            @include font16;
+            font-weight: 700;
+            padding: 15px 17px;
+        }
 
         &:hover {
             transition: 0.3s ease-in-out;

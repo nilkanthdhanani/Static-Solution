@@ -12,6 +12,15 @@
         grid-template-columns: 300px 1fr;
         gap: 80px;
 
+        @include breakpoint("lg-max") {
+            @include grid1c;
+            gap: 40px;
+        }
+
+        @include breakpoint("sm-max") {
+            padding: 20px;
+        }
+
         .contact-div1 {
             display: flex;
             justify-content: space-between;
@@ -29,14 +38,26 @@
                     gap: 7px;
                     margin-top: 20px;
 
+                    @include breakpoint("xs-max") {
+                        display: block;
+                    }
+
                     img {
                         width: 20px;
                         height: 100%;
                         margin-top: 3px;
+
+                        @include breakpoint("xs-max") {
+                            margin: 3px 0;
+                        }
                     }
 
                     p {
                         @include font18;
+
+                        @include breakpoint("sm-max") {
+                            @include font16;
+                        }
                     }
                 }
             }
@@ -44,6 +65,7 @@
             .contact-icon {
                 @include flex;
                 gap: 20px;
+                margin-top: 20px;
 
                 img {
                     width: 30px;

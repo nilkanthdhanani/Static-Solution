@@ -3,27 +3,58 @@
 .hero-banner {
     margin: 60px 0 100px 0;
 
+    @include breakpoint("sm-max") {
+        margin: 50px 0;
+    }
+
     .hero-banner-div {
         @include grid2c;
-        gap: 20px;
+
+        @include breakpoint("lg-max") {
+            @include grid1c;
+            gap: 50px;
+        }
 
         .hbd1 {
             padding: 30px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: 30px;
 
             h1 {
                 color: var(--font-color);
                 @include font60;
+
+                @include breakpoint("lg-max") {
+                    max-width: 520px;
+                }
+
+                @include breakpoint("sm-max") {
+                    @include font36;
+                    font-weight: 700;
+                }
+            }
+
+            @include breakpoint("lg-max") {
+                padding: 0;
             }
         }
 
         .hbd2 {
             padding: 30px;
 
+            @include breakpoint("lg-max") {
+                padding: 0;
+            }
+
             img {
                 width: 100%;
+
+                @include breakpoint("lg-max") {
+                    max-width: 550px;
+                    margin: 0 auto;
+                }
             }
         }
     }
@@ -39,10 +70,24 @@
         gap: 20px;
         align-items: center;
 
+        @include breakpoint("lg-max") {
+            @include grid1c;
+            gap: 50px;
+        }
+
         .hosting-div1 {
             h2 {
                 @include font48;
                 color: var(--font-color);
+
+                @include breakpoint("lg-max") {
+                    max-width: 420px;
+                }
+
+                @include breakpoint("sm-max") {
+                    @include font30;
+                    font-weight: 700;
+                }
             }
 
             p {
@@ -50,13 +95,29 @@
                 @include font24;
                 color: var(--font-color2);
                 line-height: 2;
+
+                @include breakpoint("lg-max") {
+                    max-width: 800px;
+                }
+
+                @include breakpoint("sm-max") {
+                    @include font18;
+                    line-height: 1.5;
+                }
             }
         }
 
         .hosting-div2 {
             @include grid2c;
 
+            @include breakpoint("sm-max") {
+                @include grid1c;
+            }
+
             .hosting-div2-grid {
+                display: grid;
+                grid-template-rows: 1fr;
+
                 .hosting-div2-grid-box {
                     padding: 30px;
                     background-color: var(--color-white);
@@ -77,11 +138,15 @@
                     }
 
                     h3 {
-                        @include font28;
+                        @include font30;
                         font-weight: 500;
                         color: var(--font-color);
                         margin-top: 20px;
                         text-align: center;
+
+                        @include breakpoint("sm-max") {
+                            @include font28;
+                        }
                     }
 
                     p {
@@ -124,6 +189,18 @@
         padding: 60px 0;
         position: relative;
 
+        @include breakpoint("lg-max") {
+            padding-top: 140px;
+        }
+
+        @include breakpoint("md-max") {
+            padding-top: 80px;
+        }
+
+        @include breakpoint("sm-max") {
+            padding: 50px 0;
+        }
+
         .create-div-bg {
             position: absolute;
             top: 0;
@@ -131,15 +208,30 @@
             width: 470px;
             height: 100%;
             background-color: var(--font-color);
+
+            @include breakpoint("lg-max") {
+                left: 25%;
+                width: 50%;
+            }
         }
 
         .create-div-image {
             position: relative;
             margin-left: 123px;
+            max-width: 780px;
+
+            @include breakpoint("lg-max") {
+                margin: 0;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            @include breakpoint("md-max") {
+                max-width: 500px;
+            }
 
             img {
                 width: 100%;
-                max-width: 780px;
                 border-radius: 15px;
             }
 
@@ -150,6 +242,16 @@
                 padding: 100px;
                 border-radius: 50%;
                 background-color: var(--bgcolor5);
+
+                @include breakpoint("lg-max") {
+                    padding: 65px;
+                    top: -10%;
+                    left: -50px;
+                }
+
+                @include breakpoint("sm-max") {
+                    display: none;
+                }
             }
         }
 
@@ -159,16 +261,37 @@
             justify-content: flex-end;
             margin-top: -150px;
 
+            @include breakpoint("lg-max") {
+                margin-top: -80px;
+            }
+
+            @include breakpoint("sm-max") {
+                margin-top: 20px;
+            }
+
             .create-div-text-box {
                 padding: 30px 50px;
                 background-color: var(--color-white);
                 border-radius: 15px;
                 max-width: 555px;
 
+                @include breakpoint("lg-max") {
+                    max-width: 450px;
+                }
+
+                @include breakpoint("sm-max") {
+                    padding: 20px;
+                }
+
                 h2 {
                     @include font36;
                     font-weight: 700;
                     color: var(--font-color);
+
+                    @include breakpoint("sm-max") {
+                        @include font30;
+                        font-weight: 700;
+                    }
                 }
 
                 p {
@@ -185,6 +308,10 @@
 .clients {
     margin: 60px 0;
 
+    @include breakpoint("sm-max") {
+        margin: 40px 0;
+    }
+
     .clients-div {
         text-align: center;
 
@@ -198,6 +325,11 @@
             @include font48;
             color: var(--font-color);
             margin: 20px 0 30px 0;
+
+            @include breakpoint("sm-max") {
+                @include font30;
+                font-weight: 700;
+            }
         }
 
         p {
@@ -206,11 +338,25 @@
             margin: 0 auto;
             line-height: 2;
             color: var(--font-color2);
+
+            @include breakpoint("sm-max") {
+                @include font16;
+                line-height: 1.5;
+            }
         }
 
         .clients-div-grid {
             @include grid4c;
             margin-top: 50px;
+
+            @include breakpoint("lg-max") {
+                @include grid2c;
+            }
+
+            @include breakpoint("sm-max") {
+                @include grid1c;
+                margin-top: 40px;
+            }
 
             .clients-div-grid-box {
                 padding: 30px 25px;
@@ -258,9 +404,18 @@
     padding: 100px 0 60px 0;
     background-color: var(--bgcolor3);
 
+    @include breakpoint("sm-max") {
+        padding: 50px 0;
+    }
+
     h2 {
         @include font48;
         color: var(--font-color);
+
+        @include breakpoint("sm-max") {
+            @include font30;
+            font-weight: 700;
+        }
     }
 
     .purchase-div {
@@ -268,20 +423,40 @@
         flex-wrap: wrap;
         margin-top: 30px;
 
+        @include breakpoint("sm-max") {
+            gap: 30px;
+            margin: 30px 0;
+        }
+
         .purchase-div1 {
             width: 50%;
             padding: 30px 30px 30px 0;
+
+            @include breakpoint("sm-max") {
+                width: 100%;
+                padding: 0;
+            }
 
             p {
                 @include font24;
                 color: var(--font-color2);
                 line-height: 2;
+
+                @include breakpoint("sm-max") {
+                    @include font18;
+                    line-height: 1.7;
+                }
             }
         }
 
         .purchase-div2 {
             width: 25%;
             padding: 30px;
+
+            @include breakpoint("sm-max") {
+                width: 100%;
+                padding: 0;
+            }
 
             .purchase-div2-list {
                 list-style: none;
@@ -303,19 +478,33 @@
         @include grid3c;
         gap: 30px;
 
+        @include breakpoint("lg-max") {
+            gap: 20px;
+        }
+
+        @include breakpoint("lg-max") {
+            @include grid1c;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
         .purchase-grid-box {
             padding: 30px;
             background-color: var(--color-white);
             color: var(--font-color);
             cursor: pointer;
-            transition: .3s ease-in-out;
-            
+            transition: 0.3s ease-in-out;
+
+            @include breakpoint("lg-max") {
+                padding: 30px 20px;
+            }
+
             &:hover {
                 background-color: var(--font-color);
                 border-radius: 10px;
                 color: var(--color-white);
                 transform: scale(1.08);
-                transition: .3s ease-in-out;
+                transition: 0.3s ease-in-out;
 
                 p {
                     color: var(--color-white);
@@ -336,6 +525,8 @@
 
         .plan-box {
             @include flex-between;
+            flex-wrap: wrap;
+            gap: 10px;
 
             h4 {
                 @include font24;
@@ -366,6 +557,12 @@
                 @include font24;
                 font-weight: 700;
             }
+
+            @include breakpoint("sm-max") {
+                @include font36;
+                font-weight: 700;
+                margin: 25px 0;
+            }
         }
 
         p {
@@ -373,12 +570,24 @@
             line-height: 1.6;
             color: var(--font-color2);
             margin: 50px 0;
+
+            @include breakpoint("lg-max") {
+                margin-bottom: 0;
+            }
+
+            @include breakpoint("sm-max") {
+                margin-top: 25px;
+            }
         }
     }
 }
 
 .started {
     margin: 70px 0;
+
+    @include breakpoint("sm-max") {
+        margin: 50px 0;
+    }
 
     .started-div {
         position: relative;
@@ -388,6 +597,16 @@
             top: 70px;
             padding: 140px 350px;
             background-color: var(--font-color);
+
+            @include breakpoint("lg-max") {
+                width: 100%;
+                padding: 140px;
+            }
+
+            @include breakpoint("sm-max") {
+                top: 30px;
+                padding: 100px;
+            }
         }
 
         .started-grid {
@@ -395,6 +614,16 @@
             gap: 40px;
             position: relative;
             padding: 0 60px;
+
+            @include breakpoint("lg-max") {
+                @include grid1c;
+                max-width: 650px;
+                margin: 0 auto;
+            }
+
+            @include breakpoint("sm-max") {
+                padding: 0 20px;
+            }
 
             .started-grid-box {
                 background-color: var(--color-white);
@@ -412,9 +641,22 @@
                 flex-direction: column;
                 gap: 50px;
 
+                @include breakpoint("sm-max") {
+                    padding: 20px;
+                }
+
+                @include breakpoint("sm-max") {
+                    gap: 30px;
+                }
+
                 h2 {
                     @include font48;
                     color: var(--font-color);
+
+                    @include breakpoint("sm-max") {
+                        @include font30;
+                        font-weight: 700;
+                    }
                 }
             }
         }

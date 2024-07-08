@@ -30,6 +30,11 @@ footer {
                     background-color: var(--bgcolor2);
                     border-radius: 20px 20px 20px 0;
                 }
+
+                @include breakpoint("sm-max") {
+                    width: 100%;
+                    top: -45px;
+                }
             }
 
             &:hover {
@@ -44,6 +49,15 @@ footer {
     .footer-grid {
         @include grid4c;
         margin-top: 50px;
+
+        @include breakpoint("md-max") {
+            @include grid2c;
+            gap: 40px 0;
+        }
+
+        @include breakpoint("sm-max") {
+            @include grid1c;
+        }
 
         .footer-grid-box {
             text-align: center;
