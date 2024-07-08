@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './header.scss';
 import { logo, menu, favicon, drop1, drop2, drop3, drop4, search } from '../../assets/images/png';
 import '../../styles/mixin/_mixin.scss';
@@ -12,21 +12,50 @@ export default function Header() {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isArticlesDropdownOpen, setIsArticlesDropdownOpen] = useState(false);
 
+  const appsDropdownRef = useRef(null);
+  const servicesDropdownRef = useRef(null);
+  const articlesDropdownRef = useRef(null);
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
   const toggleAppsDropdown = () => {
     setIsAppsDropdownOpen(!isAppsDropdownOpen);
+    setIsServicesDropdownOpen(false);
+    setIsArticlesDropdownOpen(false);
   };
 
   const toggleServicesDropdown = () => {
     setIsServicesDropdownOpen(!isServicesDropdownOpen);
+    setIsAppsDropdownOpen(false);
+    setIsArticlesDropdownOpen(false);
   };
 
   const toggleArticlesDropdown = () => {
     setIsArticlesDropdownOpen(!isArticlesDropdownOpen);
+    setIsAppsDropdownOpen(false);
+    setIsServicesDropdownOpen(false);
   };
+
+  const handleClickOutside = (event) => {
+    if (appsDropdownRef.current && !appsDropdownRef.current.contains(event.target)) {
+      setIsAppsDropdownOpen(false);
+    }
+    if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target)) {
+      setIsServicesDropdownOpen(false);
+    }
+    if (articlesDropdownRef.current && !articlesDropdownRef.current.contains(event.target)) {
+      setIsArticlesDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className='header'>
@@ -38,7 +67,7 @@ export default function Header() {
             </Link>
           </div>
           <div className="header-div-first">
-            <div className="header-div-ancer" onClick={toggleAppsDropdown}>
+            <div onClick={toggleAppsDropdown} className="header-div-ancer" ref={appsDropdownRef}>
               <Link>Apps</Link>
               <Dropdown />
               {isAppsDropdownOpen && (
@@ -67,7 +96,7 @@ export default function Header() {
                 </div>
               )}
             </div>
-            <div className="header-div-ancer" onClick={toggleServicesDropdown}>
+            <div onClick={toggleServicesDropdown} className="header-div-ancer" ref={servicesDropdownRef}>
               <Link>Services</Link>
               <Dropdown />
               {isServicesDropdownOpen && (
@@ -103,46 +132,46 @@ export default function Header() {
                 </div>
               )}
             </div>
-            <div className="header-div-ancer" onClick={toggleArticlesDropdown}>
+            <div onClick={toggleArticlesDropdown} className="header-div-ancer" ref={articlesDropdownRef}>
               <Link>Articles</Link>
               <Dropdown />
               {isArticlesDropdownOpen && (
                 <div className="header-div-drop2">
                   <div className="header-div-drop-list">
                     <li>
-                      <a href="design">Website Design</a>
+                      <a href="/">Website Design</a>
                       <GreaterThan />
                     </li>
                     <li>
-                      <a href="design">Email Design</a>
+                      <a href="/">Email Design</a>
                       <GreaterThan />
                     </li>
                     <li>
-                      <a href="design">Website Examples</a>
+                      <a href="/">Website Examples</a>
                       <GreaterThan />
                     </li>
                     <li>
-                      <a href="design">Email Marketing</a>
+                      <a href="/">Email Marketing</a>
                       <GreaterThan />
                     </li>
                     <li>
-                      <a href="design">Website Tools</a>
+                      <a href="/">Website Tools</a>
                       <GreaterThan />
                     </li>
                     <li>
-                      <a href="design">Email Tools</a>
+                      <a href="/">Email Tools</a>
                       <GreaterThan />
                     </li>
                     <li>
-                      <a href="design">Bootstrap</a>
+                      <a href="/">Bootstrap</a>
                       <GreaterThan />
                     </li>
                     <li>
-                      <a href="design">Resources</a>
+                      <a href="/">Resources</a>
                       <GreaterThan />
                     </li>
                     <li>
-                      <a href="design">View All Articles</a>
+                      <a href="/">View All Articles</a>
                       <GreaterThan />
                     </li>
                   </div>
@@ -152,8 +181,8 @@ export default function Header() {
           </div>
           <div className="header-div-last">
             <img src={search} alt="search" />
-            <a href="cart">Cart</a>
-            <a href="login">Log In</a>
+            <a href="/">Cart</a>
+            <a href="/">Log In</a>
             <div className="header-button">
               <button>Try Free</button>
             </div>
@@ -171,11 +200,11 @@ export default function Header() {
           </Link>
         </div>
         <div className="sidebar-div-ancer">
-          <a href="app">App</a>
-          <a href="services">Services</a>
-          <a href="articles">Articles</a>
-          <a href="cart">Cart</a>
-          <a href="login">Log In</a>
+          <a href="/">App</a>
+          <a href="/">Services</a>
+          <a href="/">Articles</a>
+          <a href="/">Cart</a>
+          <a href="/">Log In</a>
         </div>
       </div>
     </div>

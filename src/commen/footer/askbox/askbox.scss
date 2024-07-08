@@ -1,0 +1,109 @@
+@import "../../../styles/index.scss";
+
+.ask-box-main {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    z-index: 1000;
+    box-sizing: border-box;
+
+    .ask-box-content {
+        background-color: var(--color-white);
+        box-shadow:
+            rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+        .titelbar {
+            padding: 10px;
+            background-color: var(--font-color);
+            @include flex-center;
+            gap: 20px;
+        }
+
+        .answers-box,
+        .ask-box {
+            height: 350px;
+            overflow-y: auto;
+            display: none;
+            background-color: var(--bgcolor9);
+        }
+
+        .ask-box {
+            .ask-box-div {
+                padding: 10px 20px;
+
+                label {
+                    @include font14;
+                    font-weight: 500;
+                    color: var(--font-color2);
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid var(--font-color2);
+                    border-radius: 2px;
+                    background-color: var(--color-white);
+                    margin: 5px 0 10px 0;
+                    @include font14;
+
+                    &:focus {
+                        outline: 2px solid var(--font-color);
+                        border: none;
+                    }
+                }
+
+                textarea {
+                    min-height: 122px;
+                    resize: vertical;
+                }
+            }
+        }
+
+        .answers-box {
+            position: relative;
+
+            .ask-input {
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+
+                input {
+                    padding: 15px 15px;
+                    width: 100%;
+                    border: none;
+                    border-top: 2px solid var(--font-color);
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .answers-box.active {
+            display: block;
+        }
+
+        .ask-box.active {
+            display: block;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            border-radius: 50px;
+            background: #555;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #000;
+        }
+    }
+}

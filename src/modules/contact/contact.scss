@@ -1,0 +1,74 @@
+@import "../../styles/index.scss";
+
+.contact {
+    padding: 60px 0;
+    background: linear-gradient(180deg, #e5e5e5 0, #e5e5e5 30%, #359756 30%, #359756 70%, #e5e5e5 70%, #e5e5e5 100%);
+
+    .contact-div {
+        padding: 60px 50px;
+        background-color: var(--color-white);
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 80px;
+
+        .contact-div1 {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            h2 {
+                @include font30;
+                font-weight: 700;
+                color: var(--font-color);
+            }
+
+            .contact-info {
+                .contact-info-detail {
+                    display: flex;
+                    gap: 7px;
+                    margin-top: 20px;
+
+                    img {
+                        width: 20px;
+                        height: 100%;
+                        margin-top: 3px;
+                    }
+
+                    p {
+                        @include font18;
+                    }
+                }
+            }
+
+            .contact-icon {
+                @include flex;
+                gap: 20px;
+
+                img {
+                    width: 30px;
+                }
+            }
+        }
+
+        .contact-div2 {
+            input, textarea {
+                width: 100%;
+                padding: 15px 12px;
+                border: none;
+                background-color: var(--bgcolor3);
+                margin-bottom: 10px;
+                @include font16;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            textarea {
+                min-height: 122px;
+                resize: vertical;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 @import "../typography/typography";
 @import "../breakpoint/breakpoint.scss";
+@import "../mixin/mixin";
 
 .header-button {
     @include breakpoint("lg-max") {
@@ -13,11 +14,230 @@
         border-radius: 99px;
         color: var(--color-white);
         @include font16;
+        font-family: var(--font-family-open);
         font-weight: 600;
         cursor: pointer;
 
         &:hover {
             background-color: var(--bgcolor-buttonH);
+        }
+    }
+}
+
+.hbd1-button {
+    @include flex;
+    gap: 30px;
+
+    button {
+        padding: 17px 24px;
+        background-color: var(--font-color);
+        border: none;
+        border-radius: 8px;
+        color: var(--color-white);
+        @include font16;
+        font-family: var(--font-family-open);
+        letter-spacing: 1px;
+        font-weight: 700;
+        @include flex;
+        gap: 7px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:nth-child(2) {
+            background-color: var(--bgcolor2);
+            color: var(--font-color2);
+        }
+
+        img {
+            width: 20px;
+        }
+
+        &:hover {
+            transition: 0.3s ease-in-out;
+            background-color: var(--bgcolor-buttonH2);
+            &:nth-child(2) {
+                background-color: var(--bgcolor-button2);
+            }
+        }
+    }
+}
+
+.main-button {
+    button {
+        padding: 17px 50px;
+        background-color: var(--font-color);
+        border: none;
+        border-radius: 8px;
+        color: var(--color-white);
+        @include font18;
+        font-family: var(--font-family-open);
+        letter-spacing: 1px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            transition: 0.3s ease-in-out;
+            background-color: var(--bgcolor-buttonH2);
+        }
+    }
+}
+
+.free-button {
+    @include flex-center;
+    margin-top: 25px;
+
+    button {
+        padding: 8px 30px;
+        background-color: var(--font-color);
+        border: none;
+        border-radius: 50px;
+        color: var(--color-white);
+        @include font16;
+        font-family: var(--font-family-open);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            transition: 0.3s ease-in-out;
+            background-color: var(--bgcolor-buttonH3);
+        }
+    }
+}
+
+.purchase-button {
+    button {
+        padding: 17px 30px;
+        background-color: var(--font-color);
+        border: none;
+        border-radius: 8px;
+        color: var(--color-white);
+        @include font18;
+        font-family: var(--font-family-open);
+        letter-spacing: 1px;
+        font-weight: 700;
+        cursor: pointer;
+        @include flex;
+        gap: 7px;
+        transition: 0.3s ease-in-out;
+
+        svg {
+            width: 18px;
+            fill: var(--color-white);
+        }
+
+        &:hover {
+            transition: 0.3s ease-in-out;
+            background-color: var(--bgcolor-buttonH2);
+        }
+    }
+}
+
+#purchase-button-first {
+    button {
+        background-color: var(--color-white);
+        color: var(--font-color);
+
+        svg {
+            fill: var(--font-color);
+        }
+
+        &:hover {
+            background-color: var(--bgcolor-buttonH4);
+        }
+    }
+}
+
+.contact-div2 {
+    button {
+        padding: 17px;
+        width: 100%;
+        background-color: var(--font-color);
+        border: none;
+        border-radius: 8px;
+        color: var(--color-white);
+        @include font18;
+        font-family: var(--font-family-open);
+        letter-spacing: 1px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            transition: 0.3s ease-in-out;
+            background-color: var(--bgcolor-buttonH2);
+        }
+    }
+}
+
+.close-btn {
+    padding: 5px 10px;
+    position: absolute;
+    top: -35px;
+    right: 0;
+    background: var(--border-color3);
+    color: var(--color-white);
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    @include font14;
+    font-family: var(--font-family-open);
+    @include flex;
+    gap: 5px;
+    transition: 0.3s ease-in-out;
+
+    img {
+        width: 10px;
+    }
+
+    &:hover {
+        transition: 0.3s ease-in-out;
+        background-color: var(--bgcolor-buttonH5);
+    }
+}
+
+.titelbar {
+    button {
+        padding: 4px 10px;
+        border: none;
+        background: transparent;
+        border-radius: 30px;
+        color: var(--color-white);
+        @include font14;
+        font-weight: 600;
+        @include flex;
+        gap: 5px;
+        cursor: pointer;
+        
+        img {
+            width: 15px;
+        }
+        
+        &.active, &:hover {
+            background: var(--bgcolor8);
+        }
+    }
+}
+
+.ask-box-div {
+    button {
+        padding: 15px;
+        width: 100%;
+        background-color: var(--font-color);
+        border: none;
+        border-radius: 8px;
+        color: var(--color-white);
+        @include font14;
+        font-family: var(--font-family-open);
+        letter-spacing: 1px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            transition: 0.3s ease-in-out;
+            background-color: var(--bgcolor-buttonH2);
         }
     }
 }
