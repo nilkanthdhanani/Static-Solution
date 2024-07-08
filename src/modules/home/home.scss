@@ -2,6 +2,7 @@
 
 .hero-banner {
     margin: 60px 0 100px 0;
+    overflow: hidden;
 
     @include breakpoint("sm-max") {
         margin: 50px 0;
@@ -63,6 +64,7 @@
 .hosting {
     padding: 40px 0;
     background-color: var(--bgcolor3);
+    overflow: hidden;
 
     .hosting-div {
         display: grid;
@@ -184,6 +186,7 @@
 
 .create {
     background-color: var(--bgcolor3);
+    overflow: hidden;
 
     .create-div {
         padding: 60px 0;
@@ -403,6 +406,7 @@
 .purchase {
     padding: 100px 0 60px 0;
     background-color: var(--bgcolor3);
+    overflow: hidden;
 
     @include breakpoint("sm-max") {
         padding: 50px 0;
@@ -584,6 +588,7 @@
 
 .started {
     margin: 70px 0;
+    overflow: hidden;
 
     @include breakpoint("sm-max") {
         margin: 50px 0;

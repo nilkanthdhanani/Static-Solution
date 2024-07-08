@@ -31,7 +31,7 @@ export default function Contact() {
         <>
             <section className="contact">
                 <div className="container2">
-                    <div className="contact-div">
+                    <div className="contact-div" data-aos="fade-up" data-aos-duration="1000">
                         <div className="contact-div1">
                             <h2>Contact Info</h2>
                             <div className="contact-info">

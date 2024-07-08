@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './home.scss';
 import { create, heroBanner, started, upload, youtube } from '../../assets/images/png';
 import Lock from '../../assets/images/svg/lock';
@@ -9,14 +9,24 @@ import { person1, person2, person3, person4 } from '../../assets/images/jpg';
 import GreenCheck from '../../assets/images/svg/greenCheck';
 import RightArrow from '../../assets/images/svg/rightArrow';
 import Contact from '../contact';
+import Aos from 'aos';
 
 export default function Home() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+    });
+    Aos.refresh();
+  }, []);
+
   return (
     <>
       <section className="hero-banner">
         <div className="container">
           <div className="hero-banner-div">
-            <div className="hbd1">
+            <div className="hbd1" data-aos="fade-right">
               <h1>One-click solution for your static website.</h1>
               <div className="hbd1-button">
                 <button>
@@ -30,7 +40,7 @@ export default function Home() {
               </div>
             </div>
             <div className="hbd2">
-              <img src={heroBanner} alt="heroBanner" />
+              <img src={heroBanner} alt="heroBanner" data-aos="zoom-in-up" />
             </div>
           </div>
         </div>
@@ -39,7 +49,7 @@ export default function Home() {
       <section className="hosting">
         <div className="container">
           <div className="hosting-div">
-            <div className="hosting-div1">
+            <div className="hosting-div1" data-aos="fade-right">
               <h2>Hosting solution with benefits.</h2>
               <p>Turn your ideas into reality with Static. With a lot of powerful features, we guarantee simplicity and clarity.</p>
               <div className="main-button">
@@ -48,7 +58,7 @@ export default function Home() {
             </div>
             <div className="hosting-div2">
               <div className="hosting-div2-grid">
-                <div className="hosting-div2-grid-box">
+                <div className="hosting-div2-grid-box" data-aos="fade-up">
                   <div className="icon-roung">
                     <Lock />
                   </div>
@@ -61,7 +71,7 @@ export default function Home() {
                     <a href="/">MORE</a>
                   </div>
                 </div>
-                <div className="hosting-div2-grid-box">
+                <div className="hosting-div2-grid-box" data-aos="fade-up">
                   <div className="icon-roung">
                     <Code />
                   </div>
@@ -73,7 +83,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="hosting-div2-grid">
-                <div className="hosting-div2-grid-box">
+                <div className="hosting-div2-grid-box" data-aos="fade-up">
                   <div className="icon-roung">
                     <Domain />
                   </div>
@@ -83,7 +93,7 @@ export default function Home() {
                     <a href="/">MORE</a>
                   </div>
                 </div>
-                <div className="hosting-div2-grid-box">
+                <div className="hosting-div2-grid-box" data-aos="fade-up">
                   <div className="icon-roung">
                     <Storage />
                   </div>
@@ -105,13 +115,13 @@ export default function Home() {
       <section className="create">
         <div className="container">
           <div className="create-div">
-            <div className="create-div-bg"></div>
+            <div className="create-div-bg" data-aos="fade-up"></div>
             <div className="create-div-image">
-              <img src={create} alt="create" />
-              <div className="create-div-round"></div>
+              <img src={create} alt="create" data-aos="fade-down" />
+              <div className="create-div-round" data-aos="fade-right"></div>
             </div>
             <div className="create-div-text">
-              <div className="create-div-text-box">
+              <div className="create-div-text-box" data-aos="fade-left">
                 <h2>Create Amazing Website</h2>
                 <p>Quis viverra nibh cras pulvinar mattis nunc sed. Lacus sed turpis tincidunt id aliquet risus feugiat in.  Auctor augue mauris augue neque gravida in fermentum et. Feugiat in fermentum <a href="/">posuere</a> urna.</p>
                 <div className="main-button">
@@ -126,11 +136,11 @@ export default function Home() {
       <section className="clients">
         <div className="container">
           <div className="clients-div">
-            <span>TESTIMONIALS</span>
-            <h2>What Clients Say</h2>
-            <p>We place huge value on strong relationships and have seen the benefit they bring to our business. Customer feedback is vital in helping us to get it right.</p>
+            <span data-aos="zoom-in">TESTIMONIALS</span>
+            <h2 data-aos="zoom-in" data-aos-duration="2000">What Clients Say</h2>
+            <p data-aos="zoom-in" data-aos-duration="3000">We place huge value on strong relationships and have seen the benefit they bring to our business. Customer feedback is vital in helping us to get it right.</p>
             <div className="clients-div-grid">
-              <div className="clients-div-grid-box">
+              <div className="clients-div-grid-box" data-aos="fade-up">
                 <div className="person-image">
                   <img src={person1} alt="person1" />
                 </div>
@@ -138,7 +148,7 @@ export default function Home() {
                 <h3>Nat Raynolds</h3>
                 <span>Cheif Accountant</span>
               </div>
-              <div className="clients-div-grid-box">
+              <div className="clients-div-grid-box" data-aos="fade-up">
                 <div className="person-image">
                   <img src={person2} alt="person2" />
                 </div>
@@ -146,7 +156,7 @@ export default function Home() {
                 <h3>Celia Almeda</h3>
                 <span>Secretary</span>
               </div>
-              <div className="clients-div-grid-box">
+              <div className="clients-div-grid-box" data-aos="fade-up">
                 <div className="person-image">
                   <img src={person3} alt="person3" />
                 </div>
@@ -154,7 +164,7 @@ export default function Home() {
                 <h3>Bob Roberts</h3>
                 <span>Sales Manager</span>
               </div>
-              <div className="clients-div-grid-box">
+              <div className="clients-div-grid-box" data-aos="fade-up">
                 <div className="person-image">
                   <img src={person4} alt="person4" />
                 </div>
@@ -169,17 +179,17 @@ export default function Home() {
 
       <section className="purchase">
         <div className="container">
-          <h2>Purchase</h2>
+          <h2 data-aos="fade-down">Purchase</h2>
           <div className="purchase-div">
-            <div className="purchase-div1">
+            <div className="purchase-div1" data-aos="fade-right">
               <p>Start using static.app as a hosting for your websites today to get the best features to buck ratio on the market.</p>
             </div>
-            <div className="purchase-div2">
+            <div className="purchase-div2" data-aos="fade-left">
               <div className="purchase-div2-list"><GreenCheck />Unlimited Pages</div>
               <div className="purchase-div2-list"><GreenCheck />Unlimited Forms</div>
               <div className="purchase-div2-list"><GreenCheck />Unlimited HTTPS</div>
             </div>
-            <div className="purchase-div2">
+            <div className="purchase-div2" data-aos="fade-left">
               <div className="purchase-div2-list"><GreenCheck />Free Sub-Domain</div>
               <div className="purchase-div2-list"><GreenCheck />Unlimited Data</div>
               <div className="purchase-div2-list"><GreenCheck />24/7 Support</div>
@@ -191,7 +201,7 @@ export default function Home() {
                 <h4>Starter Plan</h4>
               </div>
               <h3>Free</h3>
-              <div className="purchase-button" id="purchase-button-first">
+              <div className="purchase-button">
                 <button>Upload for Free <RightArrow /> </button>
               </div>
               <p>Free static.app domain included. <br /> No credit card</p>
@@ -224,12 +234,12 @@ export default function Home() {
       <section className="started">
         <div className="container">
           <div className="started-div">
-            <div className="started-bg"></div>
+            <div className="started-bg" data-aos="fade-left"></div>
             <div className="started-grid">
               <div className="started-grid-box">
-                <img src={started} alt="started" />
+                <img src={started} alt="started" data-aos="zoom-in" />
               </div>
-              <div className="started-grid-box2">
+              <div className="started-grid-box2" data-aos="fade-up">
                 <h2>Get started with the simpliest static page</h2>
                 <div className="hbd1-button">
                   <button><img src={upload} alt="upload" /> Upload for Free</button>
@@ -240,7 +250,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Contact/>
+      <Contact />
     </>
   )
 }
