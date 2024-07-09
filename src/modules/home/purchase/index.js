@@ -10,15 +10,15 @@ export default function Purchase() {
         <div className="container">
           <h2 data-aos="fade-down">Purchase</h2>
           <div className="purchase-div">
-            <div className="purchase-div1" data-aos="fade-right" data-aos-duration="1000">
+            <div className="purchase-div1" data-aos="fade-right">
               <p>Start using static.app as a hosting for your websites today to get the best features to buck ratio on the market.</p>
             </div>
-            <div className="purchase-div2" data-aos="fade-left" data-aos-duration="1000">
+            <div className="purchase-div2" data-aos="fade-left">
               <div className="purchase-div2-list"><GreenCheck />Unlimited Pages</div>
               <div className="purchase-div2-list"><GreenCheck />Unlimited Forms</div>
               <div className="purchase-div2-list"><GreenCheck />Unlimited HTTPS</div>
             </div>
-            <div className="purchase-div2" data-aos="fade-left" data-aos-duration="1000">
+            <div className="purchase-div2" data-aos="fade-left">
               <div className="purchase-div2-list"><GreenCheck />Free Sub-Domain</div>
               <div className="purchase-div2-list"><GreenCheck />Unlimited Data</div>
               <div className="purchase-div2-list"><GreenCheck />24/7 Support</div>

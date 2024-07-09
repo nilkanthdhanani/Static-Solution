@@ -8,7 +8,7 @@ export default function HeroBanner() {
       <section className="hero-banner">
         <div className="container">
           <div className="hero-banner-div">
-            <div className="hbd1" data-aos="fade-right" data-aos-duration="1000">
+            <div className="hbd1" data-aos="fade-right">
               <h1>One-click solution for your static website.</h1>
               <div className="hbd1-button">
                 <button>
@@ -22,7 +22,7 @@ export default function HeroBanner() {
               </div>
             </div>
             <div className="hbd2">
-              <img src={heroBanner} alt="heroBanner" data-aos="zoom-in-up" data-aos-duration="1000" />
+              <img src={heroBanner} alt="heroBanner" data-aos="zoom-in-up" />
             </div>
           </div>
         </div>

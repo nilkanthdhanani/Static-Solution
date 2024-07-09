@@ -8,11 +8,11 @@ export default function Clients() {
       <section className="clients">
         <div className="container">
           <div className="clients-div">
-            <span data-aos="zoom-in" data-aos-duration="1000">TESTIMONIALS</span>
-            <h2 data-aos="zoom-in" data-aos-duration="2000">What Clients Say</h2>
-            <p data-aos="zoom-in" data-aos-duration="3000">We place huge value on strong relationships and have seen the benefit they bring to our business. Customer feedback is vital in helping us to get it right.</p>
+            <span data-aos="zoom-in">TESTIMONIALS</span>
+            <h2 data-aos="zoom-in">What Clients Say</h2>
+            <p data-aos="zoom-in">We place huge value on strong relationships and have seen the benefit they bring to our business. Customer feedback is vital in helping us to get it right.</p>
             <div className="clients-div-grid">
-              <div className="clients-div-grid-box" data-aos="fade-up" data-aos-duration="1000">
+              <div className="clients-div-grid-box" data-aos="fade-up">
                 <div className="person-image">
                   <img src={person1} alt="person1" />
                 </div>
@@ -20,7 +20,7 @@ export default function Clients() {
                 <h3>Nat Raynolds</h3>
                 <span>Cheif Accountant</span>
               </div>
-              <div className="clients-div-grid-box" data-aos="fade-up" data-aos-duration="1000">
+              <div className="clients-div-grid-box" data-aos="fade-up">
                 <div className="person-image">
                   <img src={person2} alt="person2" />
                 </div>
@@ -28,7 +28,7 @@ export default function Clients() {
                 <h3>Celia Almeda</h3>
                 <span>Secretary</span>
               </div>
-              <div className="clients-div-grid-box" data-aos="fade-up" data-aos-duration="1000">
+              <div className="clients-div-grid-box" data-aos="fade-up">
                 <div className="person-image">
                   <img src={person3} alt="person3" />
                 </div>
@@ -36,7 +36,7 @@ export default function Clients() {
                 <h3>Bob Roberts</h3>
                 <span>Sales Manager</span>
               </div>
-              <div className="clients-div-grid-box" data-aos="fade-up" data-aos-duration="1000">
+              <div className="clients-div-grid-box" data-aos="fade-up">
                 <div className="person-image">
                   <img src={person4} alt="person4" />
                 </div>
