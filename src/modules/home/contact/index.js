@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './contact.scss';
-import { facebook, instagram, location, mail, phone, twitter, youtube2 } from '../../assets/images/png';
+import { facebook, instagram, location, mail, phone, twitter, youtube2 } from '../../../assets/images/png';
 
 export default function Contact() {
     const [formData, setFormData] = useState({

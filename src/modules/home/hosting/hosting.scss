@@ -1,0 +1,124 @@
+@import '../../../styles/index.scss';
+
+.hosting {
+    padding: 40px 0;
+    background-color: var(--bgcolor3);
+    overflow: hidden;
+
+    .hosting-div {
+        display: grid;
+        grid-template-columns: 480px 1fr;
+        gap: 20px;
+        align-items: center;
+
+        @include breakpoint("lg-max") {
+            @include grid1c;
+            gap: 50px;
+        }
+
+        .hosting-div1 {
+            h2 {
+                @include font48;
+                color: var(--font-color);
+
+                @include breakpoint("lg-max") {
+                    max-width: 420px;
+                }
+
+                @include breakpoint("sm-max") {
+                    @include font30;
+                    font-weight: 700;
+                }
+            }
+
+            p {
+                margin: 30px 0 40px 0;
+                @include font24;
+                color: var(--font-color2);
+                line-height: 2;
+
+                @include breakpoint("lg-max") {
+                    max-width: 800px;
+                }
+
+                @include breakpoint("sm-max") {
+                    @include font18;
+                    line-height: 1.5;
+                }
+            }
+        }
+
+        .hosting-div2 {
+            @include grid2c;
+
+            @include breakpoint("sm-max") {
+                @include grid1c;
+            }
+
+            .hosting-div2-grid {
+                display: grid;
+                grid-template-rows: 1fr;
+
+                .hosting-div2-grid-box {
+                    padding: 30px;
+                    background-color: var(--color-white);
+
+                    .icon-roung {
+                        background-color: var(--bgcolor4);
+                        border-radius: 50%;
+                        margin: 0 auto;
+                        padding: 17px;
+                        width: 78px;
+                        opacity: 0.55;
+
+                        svg {
+                            width: 100%;
+                            display: block;
+                            fill: var(--font-color);
+                        }
+                    }
+
+                    h3 {
+                        @include font30;
+                        font-weight: 500;
+                        color: var(--font-color);
+                        margin-top: 20px;
+                        text-align: center;
+
+                        @include breakpoint("sm-max") {
+                            @include font28;
+                        }
+                    }
+
+                    p {
+                        margin: 17px 0 20px 0;
+                        @include font16;
+                        text-align: center;
+                        color: var(--font-color3);
+                        font-style: italic;
+                        line-height: 2;
+                    }
+
+                    .more-link {
+                        @include flex-center;
+
+                        a {
+                            @include font16;
+                            color: var(--font-color2);
+                            letter-spacing: 2px;
+                            border-bottom: 2px solid var(--font-color);
+
+                            &:hover {
+                                border-bottom: 2px solid var(--border-color2);
+                            }
+                        }
+                    }
+
+                    &:first-child {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

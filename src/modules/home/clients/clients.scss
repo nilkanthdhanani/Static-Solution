@@ -1,0 +1,96 @@
+@import "../../../styles/index.scss";
+
+.clients {
+    margin: 60px 0;
+
+    @include breakpoint("sm-max") {
+        margin: 40px 0;
+    }
+
+    .clients-div {
+        text-align: center;
+
+        span {
+            @include font20;
+            color: var(--font-color2);
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            @include font48;
+            color: var(--font-color);
+            margin: 20px 0 30px 0;
+
+            @include breakpoint("sm-max") {
+                @include font30;
+                font-weight: 700;
+            }
+        }
+
+        p {
+            @include font20;
+            max-width: 710px;
+            margin: 0 auto;
+            line-height: 2;
+            color: var(--font-color2);
+
+            @include breakpoint("sm-max") {
+                @include font16;
+                line-height: 1.5;
+            }
+        }
+
+        .clients-div-grid {
+            @include grid4c;
+            margin-top: 50px;
+
+            @include breakpoint("lg-max") {
+                @include grid2c;
+            }
+
+            @include breakpoint("sm-max") {
+                @include grid1c;
+                margin-top: 40px;
+            }
+
+            .clients-div-grid-box {
+                padding: 30px 25px;
+                border-radius: 15px;
+                background-color: var(--bgcolor3);
+                text-align: center;
+
+                .person-image {
+                    img {
+                        margin: 0 auto;
+                        width: 135px;
+                        height: 135px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        border: 4px solid var(--font-color);
+                    }
+                }
+
+                p {
+                    margin: 20px 0 30px 0;
+                    @include font16;
+                    color: var(--font-color2);
+                    line-height: 2;
+                }
+
+                h3 {
+                    @include font20;
+                    color: var(--font-color);
+                    font-weight: 700;
+                }
+
+                span {
+                    display: block;
+                    @include font16;
+                    color: var(--font-color2);
+                    letter-spacing: 2px;
+                    margin: 15px 0 20px 0;
+                }
+            }
+        }
+    }
+}

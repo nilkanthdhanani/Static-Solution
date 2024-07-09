@@ -1,0 +1,83 @@
+@import "../../../styles/index.scss";
+
+.started {
+    margin: 70px 0;
+    overflow: hidden;
+
+    @include breakpoint("sm-max") {
+        margin: 50px 0;
+    }
+
+    .started-div {
+        position: relative;
+
+        .started-bg {
+            position: absolute;
+            top: 70px;
+            padding: 140px 350px;
+            background-color: var(--font-color);
+
+            @include breakpoint("lg-max") {
+                width: 100%;
+                padding: 140px;
+            }
+
+            @include breakpoint("sm-max") {
+                top: 30px;
+                padding: 100px;
+            }
+        }
+
+        .started-grid {
+            @include grid2c;
+            gap: 40px;
+            position: relative;
+            padding: 0 60px;
+
+            @include breakpoint("lg-max") {
+                @include grid1c;
+                max-width: 650px;
+                margin: 0 auto;
+            }
+
+            @include breakpoint("sm-max") {
+                padding: 0 20px;
+            }
+
+            .started-grid-box {
+                background-color: var(--color-white);
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .started-grid-box2 {
+                background-color: var(--bgcolor3);
+                padding: 50px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 50px;
+
+                @include breakpoint("sm-max") {
+                    padding: 20px;
+                }
+
+                @include breakpoint("sm-max") {
+                    gap: 30px;
+                }
+
+                h2 {
+                    @include font48;
+                    color: var(--font-color);
+
+                    @include breakpoint("sm-max") {
+                        @include font30;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}

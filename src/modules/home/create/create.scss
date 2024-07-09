@@ -1,0 +1,125 @@
+@import '../../../styles/index.scss';
+
+.create {
+    background-color: var(--bgcolor3);
+    overflow: hidden;
+
+    .create-div {
+        padding: 60px 0;
+        position: relative;
+
+        @include breakpoint("lg-max") {
+            padding-top: 140px;
+        }
+
+        @include breakpoint("md-max") {
+            padding-top: 80px;
+        }
+
+        @include breakpoint("sm-max") {
+            padding: 50px 0;
+        }
+
+        .create-div-bg {
+            position: absolute;
+            top: 0;
+            left: 200px;
+            width: 470px;
+            height: 100%;
+            background-color: var(--font-color);
+
+            @include breakpoint("lg-max") {
+                left: 25%;
+                width: 50%;
+            }
+        }
+
+        .create-div-image {
+            position: relative;
+            margin-left: 123px;
+            max-width: 780px;
+
+            @include breakpoint("lg-max") {
+                margin: 0;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            @include breakpoint("md-max") {
+                max-width: 500px;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 15px;
+            }
+
+            .create-div-round {
+                position: absolute;
+                top: 70px;
+                left: -105px;
+                padding: 100px;
+                border-radius: 50%;
+                background-color: var(--bgcolor5);
+
+                @include breakpoint("lg-max") {
+                    padding: 65px;
+                    top: -10%;
+                    left: -50px;
+                }
+
+                @include breakpoint("sm-max") {
+                    display: none;
+                }
+            }
+        }
+
+        .create-div-text {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -150px;
+
+            @include breakpoint("lg-max") {
+                margin-top: -80px;
+            }
+
+            @include breakpoint("sm-max") {
+                margin-top: 20px;
+            }
+
+            .create-div-text-box {
+                padding: 30px 50px;
+                background-color: var(--color-white);
+                border-radius: 15px;
+                max-width: 555px;
+
+                @include breakpoint("lg-max") {
+                    max-width: 450px;
+                }
+
+                @include breakpoint("sm-max") {
+                    padding: 20px;
+                }
+
+                h2 {
+                    @include font36;
+                    font-weight: 700;
+                    color: var(--font-color);
+
+                    @include breakpoint("sm-max") {
+                        @include font30;
+                        font-weight: 700;
+                    }
+                }
+
+                p {
+                    @include font16;
+                    color: var(--font-color2);
+                    line-height: 2;
+                    margin: 20px 0 30px 0;
+                }
+            }
+        }
+    }
+}

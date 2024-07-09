@@ -1,0 +1,62 @@
+@import "../../../styles/index.scss";
+
+.hero-banner {
+    margin: 60px 0 100px 0;
+    overflow: hidden;
+
+    @include breakpoint("sm-max") {
+        margin: 50px 0;
+    }
+
+    .hero-banner-div {
+        @include grid2c;
+
+        @include breakpoint("lg-max") {
+            @include grid1c;
+            gap: 50px;
+        }
+
+        .hbd1 {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 30px;
+
+            h1 {
+                color: var(--font-color);
+                @include font60;
+
+                @include breakpoint("lg-max") {
+                    max-width: 520px;
+                }
+
+                @include breakpoint("sm-max") {
+                    @include font36;
+                    font-weight: 700;
+                }
+            }
+
+            @include breakpoint("lg-max") {
+                padding: 0;
+            }
+        }
+
+        .hbd2 {
+            padding: 30px;
+
+            @include breakpoint("lg-max") {
+                padding: 0;
+            }
+
+            img {
+                width: 100%;
+
+                @include breakpoint("lg-max") {
+                    max-width: 550px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
